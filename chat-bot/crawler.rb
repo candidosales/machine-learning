@@ -9,10 +9,9 @@ url = 'http://www2.planalto.gov.br/acompanhe-o-planalto/discursos/discursos-da-p
 path_css_link = 'h2.tileHeadline a.summary'
 path_css_content = '#content-core #parent-fieldname-text'
 params = '?b_start:int='
-array_paginate = [*8..9].map { |number|  "#{params}#{number * 100}" }
+array_paginate = [*0..9].map { |number|  "#{params}#{number * 100}" }
 
 array_paginate.each_with_index { |paginate, index|
-    index = index + 8
     url_paginate = "#{url}#{paginate}"
 
     puts "Index: #{index}"
