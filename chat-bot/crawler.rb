@@ -9,13 +9,14 @@ url = 'http://www2.planalto.gov.br/acompanhe-o-planalto/discursos/discursos-da-p
 path_css_link = 'h2.tileHeadline a.summary'
 path_css_content = '#content-core #parent-fieldname-text'
 params = '?b_start:int='
-array_paginate = [*0..9].map { |number|  "#{params}#{number * 100}" }
+array_paginate = [*2..9].map { |number|  "#{params}#{number * 100}" }
 
 array_paginate.each_with_index { |paginate, index|
-    puts index
+    index = index + 2
     url_paginate = "#{url}#{paginate}"
 
-    puts url_paginate
+    puts "Index: #{index}"
+    puts "URL  : #{url_paginate}"
 
     scraper = Upton::Scraper.new(url_paginate, path_css_link)
     scraper.sleep_time_between_requests = 1
@@ -24,7 +25,7 @@ array_paginate.each_with_index { |paginate, index|
         Nokogiri::HTML(html).search(path_css_content).map &:text
     end
 
-    puts "Save in file output-#{index}.csv"
+    puts "Saved in file output-#{index}.csv"
     puts "######################################################################"
 }
 
