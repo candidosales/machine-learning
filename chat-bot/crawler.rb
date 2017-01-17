@@ -1,10 +1,5 @@
 require 'upton'
 
-# scraper = Upton::Scraper.new("http://www2.planalto.gov.br/acompanhe-o-planalto/discursos/discursos-da-presidenta/discurso-da-presidenta-da-republica-dilma-rousseff-durante-cerimonia-de-posse-da-ministra-chefe-da-casa-civil-da-presidencia-da-republica-gleisi-hoffmann", "#content-core")
-# scraper.scrape_to_csv "output.csv" do |html|
-#   Nokogiri::HTML(html).search("#parent-fieldname-text").map &:text
-# end
-
 url = 'http://www2.planalto.gov.br/acompanhe-o-planalto/discursos/discursos-da-presidenta'
 path_css_link = 'h2.tileHeadline a.summary'
 path_css_content = '#content-core #parent-fieldname-text'

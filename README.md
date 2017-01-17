@@ -12,8 +12,8 @@ pip install pandas numpy
 sudo apt-get install python-matplotlib
 ```
 
-
-References:
+# References:
+* https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/
 * https://medium.com/@ageitgey/machine-learning-is-fun-80ea3ec3c471#.wcbc84wr2
 * https://www.youtube.com/user/aicourses
 * https://news.ycombinator.com/item?id=13264102
